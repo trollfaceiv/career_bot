@@ -1,1 +1,5 @@
-Mi chiamo Gennaro sono un software engineer, mi sono laureato nel 2023 e lavoro da circa 3 anni, sono a Napoli ma faccio su e giu da Lugano, sono esperto di backend e di AI.
+Sono Gennaro Rascato, Software Engineer con oltre 3 anni di esperienza nello sviluppo backend, cloud e AI integration. Laureato in Informatica (2023) e attualmente laureando magistrale in Cybersecurity, unisco competenze tecniche trasversali che mi permettono di affrontare ogni progetto con preparazione e flessibilità.
+
+Il mio focus è su architetture distribuite, microservizi e sistemi serverless, con stack moderni (Java, Python, Spring Boot, Django, Docker, Kubernetes, Azure). Sto approfondendo LangChain, MCP e framework AI agentici, per integrare modelli generativi in applicazioni reali e scalabili.
+
+Mi distingue un approccio pragmatico e orientato ai risultati, con una conoscenza orizzontale che mi consente di non trovarmi mai impreparato e di portare innovazione continua nei progetti a cui lavoro.
