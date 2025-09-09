@@ -75,16 +75,19 @@ class Me:
         self.openai = OpenAI(api_key=os.getenv("GOOGLE_API_KEY"), base_url="https://generativelanguage.googleapis.com/v1beta/openai/")
         self.model_name = "gemini-2.0-flash"
         self.name = "Gennaro Rascato"
+        base = os.path.dirname(__file__)             
+        self.profile_path = os.path.join(base, "me", "Profile.pdf")
+        summary_path = os.path.join(base, "me", "summary.txt")
+        self.cv_path = os.path.join(base, "me", "CV.pdf")
         self.linkedin_url = "https://www.linkedin.com/in/gennaro-rascato"
         self.github_url   = "https://github.com/trollfaceiv"
-        reader = PdfReader("/me/Profile.pdf")
-        
+        reader = PdfReader(self.profile_path)
         self.linkedin = ""
         for page in reader.pages:
             text = page.extract_text()
             if text:
                 self.linkedin += text
-        with open("me/summary.txt", "r", encoding="utf-8") as f:
+        with open(summary_path, "r", encoding="utf-8") as f:
             self.summary = f.read()
 
     def handle_tool_calls(self, tool_calls):
@@ -157,7 +160,7 @@ if __name__ == "__main__":
                 )
                 gr.DownloadButton(
                     label="⬇️ Scarica CV (PDF)",
-                    value="/me/CV.pdf"
+                    value=me.cv_path
                 )
 
                 # opzionale: mostra anche un estratto del sommario
