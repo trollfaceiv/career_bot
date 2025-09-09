@@ -77,13 +77,14 @@ class Me:
         self.name = "Gennaro Rascato"
         self.linkedin_url = "https://www.linkedin.com/in/gennaro-rascato"
         self.github_url   = "https://github.com/trollfaceiv"
-        reader = PdfReader("1_career_bot/me/Profile.pdf")
+        reader = PdfReader("/me/Profile.pdf")
+        
         self.linkedin = ""
         for page in reader.pages:
             text = page.extract_text()
             if text:
                 self.linkedin += text
-        with open("1_career_bot/me/summary.txt", "r", encoding="utf-8") as f:
+        with open("me/summary.txt", "r", encoding="utf-8") as f:
             self.summary = f.read()
 
     def handle_tool_calls(self, tool_calls):
@@ -156,7 +157,7 @@ if __name__ == "__main__":
                 )
                 gr.DownloadButton(
                     label="⬇️ Scarica CV (PDF)",
-                    value="test"
+                    value="/me/CV.pdf"
                 )
 
                 # opzionale: mostra anche un estratto del sommario
