@@ -136,7 +136,7 @@ class Me:
 if __name__ == "__main__":
     me = Me()
 
-    with gr.Blocks(title="Career Assistant – Gennaro") as demo:
+    with gr.Blocks(title="Career Assistant – Gennaro", theme=gr.themes.Ocean(), mode="light") as demo:
         gr.Markdown("## 💼 Assistente di **Gennaro Rascato**")
 
         with gr.Row():
@@ -145,9 +145,16 @@ if __name__ == "__main__":
                 gr.ChatInterface(
                 me.chat,
                 type="messages",
+                examples=[
+                    "Presentati in breve",
+                    "In cosa sei bravo?",
+                    "Come posso contattarti?",
+                    "Parlami della tua ultima esperienza lavorativa"
+                ],
                 chatbot=gr.Chatbot(label="Chat", height=520, type="messages"),
                 textbox=gr.Textbox(placeholder="Scrivi un messaggio…", label="Messaggio"),
-                submit_btn="Invia 🚀"
+                submit_btn="Invia 🚀",
+                show_progress="minimal"
             )
 
 
